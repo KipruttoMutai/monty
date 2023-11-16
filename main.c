@@ -1,5 +1,7 @@
 #include "monty.h"
-script_info s_data = {NULL, NULL, NULL, 0};
+#include <stdio.h>
+
+/*script_info s_data = {NULL, NULL, NULL, 0};*/
 /*
  * main - interprates the monty codes
  * @argc: no of arguments

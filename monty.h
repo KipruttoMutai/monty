@@ -1,5 +1,6 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _POSIX_C_SOURCE 200809L
 
 /*HEADER FILES*/
 #include <stdio.h>
@@ -9,6 +10,9 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+
+/*EXTERNAL VARIABLES*/
+script_info s_data = {NULL, NULL, NULL, 0};
 
 /*STRUCTURES*/
 /**
