@@ -23,7 +23,7 @@ void br_push(stack_t **head, unsigned int counter)
 			fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(s_data.s_file);
 			free(s_data.content);
-			/*free_stack(*head);*/
+			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
 		else
@@ -31,7 +31,7 @@ void br_push(stack_t **head, unsigned int counter)
 			fprintf(stderr, "L%d: usage: push integer\n", counter);
 			fclose(s_data.s_file);
 			free(s_data.content);
-			/*free_stack(*head);*/
+			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
 		n = atoi(s_data.arg);
