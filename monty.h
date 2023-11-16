@@ -75,4 +75,10 @@ void free_stack(stack_t *head);
 void br_pint(stack_t **head, unsigned int counter);
 void br_pop(stack_t **head, unsigned int counter);
 void br_swap(stack_t **head, unsigned int counter);
+void br_add(stack_t **head, unsigned int counter);
+void br_nop(stack_t **head, unsigned int counter);
+void br_sub(stack_t **head, unsigned int counter);
+void br_div(stack_t **head, unsigned int counter);
+void br_mul(stack_t **head, unsigned int counter);
+
 #endif /*MONTY_H*/
