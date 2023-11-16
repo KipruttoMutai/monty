@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		}
 		free(content);
 	}
-	/*free_stack(stack);*/
+	free_stack(stack);
 	fclose(s_file);
 	return (0);
 }
@@ -80,7 +80,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
 		free(content);
-		/*free_stack(*stack);*/
+		free_stack(*stack);
 		exit(EXIT_FAILURE); }
 	return (1);
 }
