@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
-		{"push", br_push}, {"pall", br_pall},{"pint", br_pint},
+		{"push", br_push}, {"pall", br_pall},{"pint", br_pint}, {"br_pop", pop}
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
