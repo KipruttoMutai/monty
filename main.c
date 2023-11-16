@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		line = getline(&content, &size, s_file);
 		s_data.content = content;
 		counter++;
-		if (read_line > 0)
+		if (line > 0)
 		{
 			execute(content, &stack, counter, s_file);
 		}
