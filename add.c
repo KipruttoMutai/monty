@@ -44,7 +44,7 @@ void br_nop(stack_t **head, unsigned int counter)
 }
 
 /**
- *br_sub- subtracts 
+ *br_sub - subtracts
  *@head: stack head
  *@counter: line
  *Return: Null
