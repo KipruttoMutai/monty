@@ -1,5 +1,16 @@
 #ifndef MONTY_H
 #define MONTY_H
+
+/*HEADER FILES*/
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <string.h>
+#include <ctype.h>
+
+/*STRUCTURES*/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -49,4 +60,6 @@ typedef struct script_data
 
 extern script_info s_data;
 
+/*FUNCION PROTOTYPES*/
+int main(int argc, char *argv[]);
 #endif /*MONTY_H*/
