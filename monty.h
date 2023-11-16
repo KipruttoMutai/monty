@@ -11,8 +11,8 @@
 #include <string.h>
 #include <ctype.h>
 
-/*EXTERNAL VARIABLES*/
-script_info s_data = {NULL, NULL, NULL, 0};
+/*EXTERNAL VARIABLES
+script_info s_data = {NULL, NULL, NULL, 0};*/
 
 /*STRUCTURES*/
 /**
