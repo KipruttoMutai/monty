@@ -71,5 +71,6 @@ void addnode(stack_t **head, int n);
 void br_push(stack_t **head, unsigned int counter);
 void br_pall(stack_t **head, unsigned int counter);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
-
+void free_stack(stack_t *head);
+void br_pint(stack_t **head, unsigned int counter);
 #endif /*MONTY_H*/
