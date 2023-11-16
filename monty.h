@@ -62,4 +62,6 @@ extern script_info s_data;
 
 /*FUNCION PROTOTYPES*/
 int main(int argc, char *argv[]);
+void addqueue(stack_t **head, int n);
+void addnode(stack_t **head, int n);
 #endif /*MONTY_H*/
