@@ -10,7 +10,7 @@ void br_pint(stack_t **head, unsigned int counter)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
-		fclose(s_data.file);
+		fclose(s_data.s_file);
 		free(s_data.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
