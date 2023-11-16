@@ -57,8 +57,8 @@ int main(int argc, char *argv[])
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
-		{"push", br_push}, {"pall", br_pall},{"pint", br_pint}, {"pop", br_pop}, 
-		{"swap", br_swap}, {"add", br_add}, {"nop", br_nop}, {"sub", br_sub}, 
+		{"push", br_push}, {"pall", br_pall},{"pint", br_pint}, {"pop", br_pop},
+		{"swap", br_swap}, {"add", br_add}, {"nop", br_nop}, {"sub", br_sub},
 		{"div", br_div}, {"mul", br_mul}, {NULL, NULL}
 	};
 	unsigned int i = 0;
