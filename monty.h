@@ -64,4 +64,8 @@ extern script_info s_data;
 int main(int argc, char *argv[]);
 void addqueue(stack_t **head, int n);
 void addnode(stack_t **head, int n);
+void br_push(stack_t **head, unsigned int counter);
+void br_pall(stack_t **head, unsigned int counter);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+
 #endif /*MONTY_H*/
