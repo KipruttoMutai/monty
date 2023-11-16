@@ -7,56 +7,53 @@
  */
 void addqueue(stack_t **head, int n)
 {
-	stack_t *new_node, *current;
+	stack_t *new_node, *aux;
 
+	aux = *head;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
 		printf("Error\n");
-		return;
 	}
 	new_node->n = n;
 	new_node->next = NULL;
-	if (*head == NULL)
+	if (aux)
+	{
+		while (aux)
+			aux = aux->next;
+	}
+	if (!aux)
 	{
 		*head = new_node;
 		new_node->prev = NULL;
-		return;
 	}
-	current = *head;
-	while (current->next != NULL)
+	else
 	{
-		current = current->next;
+		aux->next = new_node;
+		new_node->prev = aux;
 	}
-	current->next = new_node;
-	new_node->prev = current;
 }
 /**
  * addnode - add node to the head stack
  * @head: head of the stack
- * @n: new_value
- * Return: no return
+ * @n: new value
+ * Return: Null
  */
 void addnode(stack_t **head, int n)
 {
 
-	stack_t *new_node;
+	stack_t *new_node, aux;
 
+	aux = *head;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{ printf("Error\n");
 		exit(0);
 	}
+	if (aux)
+		aux->prev = new_node;
 	new_node->n = n;
+	new_node->next = *head;
 	new_node->prev = NULL;
-	if (*head == NULL)
-	{
-		new_node->next = NULL;
-	}
-	else
-	{
-		new_node->next = *head;
-		(*head)->prev = new_node;
-	}
 	*head = new_node;
 }
