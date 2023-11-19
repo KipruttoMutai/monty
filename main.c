@@ -2,12 +2,13 @@
 #include <stdio.h>
 
 script_info s_data = {NULL, NULL, NULL, 0};
-/*
- * main - interprates the monty codes
- * @argc: no of arguments
- * argv: location of file
- * Return: Returns 0 on success 1 on failure
- **/
+
+/**
+ * main - Entry point of the program
+ * @argc: Number of arguments passed to the program
+ * @argv: Array of pointers to the arguments as strings
+ * Return: Always 0
+ */
 int main(int argc, char *argv[])
 {
 	char *content;
@@ -50,17 +51,16 @@ int main(int argc, char *argv[])
  * execute - executes the opcode
  * @stack: head linked list - stack
  * @counter: line_counter
- * @file: poiner to monty file
+ * @s_file: poiner to monty file
  * @content: line content
  * Return: Null
  */
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *s_file)
 {
-	instruction_t opst[] = {
-		{"push", br_push}, {"pall", br_pall},{"pint", br_pint}, {"pop", br_pop},
-		{"swap", br_swap}, {"add", br_add}, {"nop", br_nop}, {"sub", br_sub},
-		{"div", br_div}, {"mul", br_mul}, {NULL, NULL}
-	};
+	instruction_t opst[] = {{"push", br_push}, {"pall", br_pall},
+		{"pint", br_pint}, {"pop", br_pop}, {"swap", br_swap}, {"add", br_add},
+		{"nop", br_nop}, {"sub", br_sub}, {"div", br_div}, {"mul", br_mul},
+		{NULL, NULL}};
 	unsigned int i = 0;
 	char *op;
 
@@ -79,7 +79,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	if (op && opst[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
-		fclose(file);
+		fclose(s_file);
 		free(content);
 		free_stack(*stack);
 		exit(EXIT_FAILURE); }

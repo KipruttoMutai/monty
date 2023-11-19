@@ -11,9 +11,6 @@
 #include <string.h>
 #include <ctype.h>
 
-/*EXTERNAL VARIABLES
-script_info s_data = {NULL, NULL, NULL, 0};*/
-
 /*STRUCTURES*/
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -63,6 +60,7 @@ typedef struct script_data
 } script_info;
 
 extern script_info s_data;
+/*script_info s_data = {NULL, NULL, NULL, 0};*/
 
 /*FUNCION PROTOTYPES*/
 int main(int argc, char *argv[]);
@@ -70,7 +68,7 @@ void addqueue(stack_t **head, int n);
 void addnode(stack_t **head, int n);
 void br_push(stack_t **head, unsigned int counter);
 void br_pall(stack_t **head, unsigned int counter);
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *s_file);
 void free_stack(stack_t *head);
 void br_pint(stack_t **head, unsigned int counter);
 void br_pop(stack_t **head, unsigned int counter);
