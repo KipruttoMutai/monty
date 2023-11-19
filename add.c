@@ -120,7 +120,7 @@ void br_div(stack_t **head, unsigned int counter)
 void br_mul(stack_t **head, unsigned int counter)
 {
 	stack_t *c;
-	int len = 0, aux;
+	int aux;
 
 	c = *head;
 	if (c == NULL || c->next == NULL)
