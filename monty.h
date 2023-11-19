@@ -78,5 +78,8 @@ void br_nop(stack_t **head, unsigned int counter);
 void br_sub(stack_t **head, unsigned int counter);
 void br_div(stack_t **head, unsigned int counter);
 void br_mul(stack_t **head, unsigned int counter);
+void br_pchar(stack_t **head, unsigned int counter);
+void br_pstr(stack_t **head, unsigned int counter);
+void br_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter);
 
 #endif /*MONTY_H*/
