@@ -7,13 +7,13 @@
  */
 void br_push(stack_t **head, unsigned int counter)
 {
-	int n, i = 0, flag = 0;
+	int n, j = 0, flag = 0;
 
 	if (s_data.arg)
 	{
 		if (s_data.arg[0] == '-')
-			i++;
-		for (; s_data.arg[i] != '\0'; i++)
+			j++;
+		for (; s_data.arg[i] != '\0'; j++)
 		{
 			if (s_data.arg[i] > 57 || s_data.arg[i] < 48)
 				flag = 1;
@@ -50,15 +50,15 @@ void br_push(stack_t **head, unsigned int counter)
  */
 void br_pall(stack_t **head, unsigned int counter)
 {
-	stack_t *j;
+	stack_t *h;
 	(void)counter;
 
-	j = *head;
-	if (j == NULL)
+	h = *head;
+	if (h == NULL)
 		return;
-	while (j)
+	while (h)
 	{
-		printf("%d\n", j->n);
-		j = j->next;
+		printf("%d\n", h->n);
+		h = h->next;
 	}
 }
