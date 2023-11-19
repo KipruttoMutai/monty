@@ -52,20 +52,19 @@ void br_nop(stack_t **head, unsigned int counter)
 void br_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;
-	int sub, nodes;
+	int sub;
 
 	aux = *head;
-	for (nodes = 0; aux != NULL; nodes++)
-		aux = aux->next;
-	if (nodes < 2)
+	if (aux == NULL || aux->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't subtract, stack too short\n", counter);
-		fclose(s_data.s_file);
+		if (s_data.s_file != NULL)
+			fclose(s_data.s_file);
 		free(s_data.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	aux = *head;
+
 	sub = aux->next->n - aux->n;
 	aux->next->n = sub;
 	*head = aux->next;
@@ -124,20 +123,15 @@ void br_mul(stack_t **head, unsigned int counter)
 	int len = 0, aux;
 
 	c = *head;
-	while (c)
-	{
-		c = c->next;
-		len++;
-	}
-	if (len < 2)
+	if (c == NULL || c->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
-		fclose(s_data.s_file);
+		if (s_data.s_file != NULL)
+			fclose(s_data.s_file);
 		free(s_data.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	c = *head;
 	aux = c->next->n * c->n;
 	c->next->n = aux;
 	*head = c->next;
