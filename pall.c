@@ -13,9 +13,9 @@ void br_push(stack_t **head, unsigned int counter)
 	{
 		if (s_data.arg[0] == '-')
 			j++;
-		for (; s_data.arg[i] != '\0'; j++)
+		for (; s_data.arg[j] != '\0'; j++)
 		{
-			if (s_data.arg[i] > 57 || s_data.arg[i] < 48)
+			if (s_data.arg[j] > 57 || s_data.arg[j] < 48)
 				flag = 1;
 		}
 		if (flag == 1)
