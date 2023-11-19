@@ -1,6 +1,7 @@
 #include "monty.h"
 #include <stdio.h>
 
+int main(int argc, char *argv[]);
 script_info s_data = {NULL, NULL, NULL, 0};
 
 /**
