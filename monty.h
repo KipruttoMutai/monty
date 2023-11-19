@@ -81,4 +81,7 @@ void br_mul(stack_t **head, unsigned int counter);
 void br_pchar(stack_t **head, unsigned int counter);
 void br_pstr(stack_t **head, unsigned int counter);
 void br_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter);
+void br_queue(stack_t **head, unsigned int counter);
+void br_stack(stack_t **head, unsigned int counter);
+
 #endif /*MONTY_H*/
