@@ -26,20 +26,20 @@ void br_push(stack_t **head, unsigned int counter)
 			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
-		else
-		{
-			fprintf(stderr, "L%d: usage: push integer\n", counter);
-			fclose(s_data.s_file);
-			free(s_data.content);
-			free_stack(*head);
-			exit(EXIT_FAILURE);
-		}
-		n = atoi(s_data.arg);
-		if (s_data.lifi == 0)
-			addnode(head, n);
-		else
-			addqueue(head, n);
 	}
+	else
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
+		fclose(s_data.s_file);
+		free(s_data.content);
+		free_stack(*head);
+		exit(EXIT_FAILURE);
+	}
+	n = atoi(s_data.arg);
+	if (s_data.lifi == 0)
+		addnode(head, n);
+	else
+		addqueue(head, n);
 }
 
 /**
